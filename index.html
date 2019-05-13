@@ -37,16 +37,17 @@
         fetch("./blogs/blogsjson.json").then(response => {
     return response.json();
   }).then(arr => {
-          for(var i=0; i < arr.blogs.length; i++) {
-            var rows = document.getElementById("blogger").rows.length;
-            var table = document.getElementById("blogger");
-            var row = table.insertRow(rows);
-            var dateofblog = row.insertCell(0);
-            var blogtext = row.insertCell(1);
-            var blogimages = row.insertCell(2);
-            dateofblog.innerHTML = arr.blogs[i].date;
-            blogtext.innerHTML = arr.blogs[i].text;
-            blogimages.innerHTML = arr.blogs[i].images;
+//           for(var i=0; i < arr.blogs.length; i++) {
+//             var rows = document.getElementById("blogger").rows.length;
+//             var table = document.getElementById("blogger");
+//             var row = table.insertRow(rows);
+//             var dateofblog = row.insertCell(0);
+//             var blogtext = row.insertCell(1);
+//             var blogimages = row.insertCell(2);
+//             dateofblog.innerHTML = arr.blogs[i].date;
+//             blogtext.innerHTML = arr.blogs[i].text;
+//             blogimages.innerHTML = arr.blogs[i].images;
+          alert(arr.blogs[0].text);
           }
         }).catch(err => alert(err););
   </body>
