@@ -34,8 +34,9 @@
         <th>Images</th>
       </tr>
       <script>
-        arr=fetch("./blogs/blogsjson.json");
-        function writeblog(arr) {
+        arr=fetch("./blogs/blogsjson.json").then(response => {
+    return response.json();
+  }).then(arr => {
           for(i=0; i < blogs.length; i++) {
             var rows = document.getElementById("blogger").rows.length;
             var table = document.getElementById("blogger");
@@ -47,6 +48,6 @@
             blogtext.innerHTML = arr[i].text;
             blogimages.innerHTML = arr[i].images;
           }
-        }
+        }).catch(err => alert(err););
   </body>
 </html>
