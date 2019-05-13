@@ -34,7 +34,7 @@
         <th>Images</th>
       </tr>
       <script>
-        src ="./blogs/blogsjson.json";
+        arr=fetch("./blogs/blogsjson.json");
         function writeblog(arr) {
           for(i=0; i < blogs.length; i++) {
             var rows = document.getElementById("blogger").rows.length;
