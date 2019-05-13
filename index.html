@@ -34,7 +34,7 @@
         <th>Images</th>
       </tr>
       <script>
-        arr=fetch("./blogs/blogsjson.json").then(response => {
+        fetch("./blogs/blogsjson.json").then(response => {
     return response.json();
   }).then(arr => {
           for(var i=0; i < arr.blogs.length; i++) {
